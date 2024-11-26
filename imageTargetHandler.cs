@@ -39,7 +39,7 @@ public class imageTargetHandler : MonoBehaviour
         if (targetStatus.Status == Status.TRACKED ||
             targetStatus.Status == Status.EXTENDED_TRACKED)
         {
-            // Image has been detected
+            //image has been detected
             sequenceManager.imageScanned(panelNumber);
         }
     }
