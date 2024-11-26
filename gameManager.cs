@@ -12,12 +12,10 @@ public class gameManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject incorrectExhibitPanel;
 
-    //public GameObject gameOverText;
     private int currentStep = 1;
     public int totalSteps = 5;
 
     private UIManager uiMan;
-    //private sequenceManager sManager;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +27,6 @@ public class gameManager : MonoBehaviour
         }
         //getting the correct ui to be displayed when starting
         uiMan = GetComponent<UIManager>();
-        //sManager = GetComponent<sequenceManager>();
 
         //method to update the lives
         updateLivesUI();
@@ -44,7 +41,6 @@ public class gameManager : MonoBehaviour
     //method to get updated amount of lives
     public int getLives()
     {
-        //return livesLeft;
         return PlayerPrefs.GetInt("lives", livesLeft);
     }
 
