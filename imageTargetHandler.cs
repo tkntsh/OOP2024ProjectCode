@@ -36,8 +36,7 @@ public class imageTargetHandler : MonoBehaviour
     //method to check if image has been detected 
     private void OnTargetStatusChanged(ObserverBehaviour behaviour, TargetStatus targetStatus)
     {
-        if (targetStatus.Status == Status.TRACKED ||
-            targetStatus.Status == Status.EXTENDED_TRACKED)
+        if(targetStatus.Status == Status.TRACKED || targetStatus.Status == Status.EXTENDED_TRACKED)
         {
             //image has been detected
             sequenceManager.imageScanned(panelNumber);
@@ -49,7 +48,7 @@ public class imageTargetHandler : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == targetSceneName)
+        if(currentScene.name == targetSceneName)
         {
             if(sequenceManager.isCorrectPanel(panelNumber))
             {
