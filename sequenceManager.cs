@@ -8,7 +8,6 @@ public class sequenceManager : MonoBehaviour
     private gameManager gameM;
     private UIManager uiM;
     public int currentStep = 1;
-    //public GameObject incorrectExhibtPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -41,11 +40,13 @@ public class sequenceManager : MonoBehaviour
         }
     }
 
+    //method returns true or false if panel displayed is the correct panel using step
     public bool isCorrectPanel(int panelNumber)
     {
         return panelNumber == currentStep;
     }
 
+    //method to advance the step
     public void advanceStep()
     {
         currentStep++;
