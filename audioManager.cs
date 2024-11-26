@@ -33,7 +33,6 @@ public class audioManager : MonoBehaviour
     void Start()
     {
         //referring back to original game object in game manager script
-        //gameM = gameManager.instance;
         radioBtn.SetActive(false);
 
         radioBtnListener.onClick.AddListener(changeSong);
@@ -84,7 +83,7 @@ public class audioManager : MonoBehaviour
     public void selectSong()
     {
         //check if audio source isnt null
-        if (audioSource.clip != null)
+        if(audioSource.clip != null)
         {
             //checking if song chosen is the correct song
             if(audioSource.clip.name == correctSongName)
