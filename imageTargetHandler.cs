@@ -27,7 +27,7 @@ public class imageTargetHandler : MonoBehaviour
     //if image is not longer scanned
     private void OnDestroy()
     {
-        if (observerBehaviour)
+        if(observerBehaviour)
         {
             observerBehaviour.OnTargetStatusChanged -= OnTargetStatusChanged;
         }
